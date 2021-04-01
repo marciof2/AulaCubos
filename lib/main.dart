@@ -16,18 +16,9 @@ class MyApp extends StatelessWidget {
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
-                  ContainerCores(
-                    cor: Colors.white,
-                    altura: 100,
-                  ),
-                  ContainerCores(
-                    cor: Colors.white,
-                    altura: 100,
-                  ),
-                  ContainerCores(
-                    cor: Colors.white,
-                    altura: 100,
-                  ),
+                  ContainerCores(),
+                  ContainerCores(),
+                  ContainerCores(),
                 ],
               ),
             ),
@@ -57,19 +48,11 @@ class MyApp extends StatelessWidget {
 }
 
 class ContainerCores extends StatelessWidget {
-  Color cor;
-  double altura;
-  double largura;
-
-  ContainerCores({Key key, this.cor, this.altura, this.largura})
-      : super(key: key);
-
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: altura,
-      width: largura,
-      color: cor,
+      height: 100,
+      color: Colors.white,
     );
   }
 }
