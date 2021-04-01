@@ -15,7 +15,20 @@ class MyApp extends StatelessWidget {
               margin: EdgeInsets.all(30),
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
-                children: [],
+                children: [
+                  ContainerCores(
+                    cor: Colors.white,
+                    altura: 100,
+                  ),
+                  ContainerCores(
+                    cor: Colors.white,
+                    altura: 100,
+                  ),
+                  ContainerCores(
+                    cor: Colors.white,
+                    altura: 100,
+                  ),
+                ],
               ),
             ),
           ),
@@ -49,15 +62,19 @@ class MyApp extends StatelessWidget {
   }
 }
 
-class ContainerPrincipal extends StatelessWidget {
+class ContainerCores extends StatelessWidget {
   final Color cor;
+  double altura;
+  double largura;
 
-  ContainerPrincipal({Key key, this.cor}) : super(key: key);
+  ContainerCores({Key key, this.cor, this.altura, this.largura})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 100,
+      height: altura,
+      width: largura,
       color: cor,
     );
   }
